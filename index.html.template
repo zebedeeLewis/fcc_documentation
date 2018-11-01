@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+     content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Zebedee Lewis" />
+    <link rel="stylesheet" type="text/css"
+     href="./globals.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header class="navbar__header">
+        <span class="navbar__logo"></span>
+        <span class="navbar__hamgurger"></span>
+      </header>
+    <!--
+      1) HTTP Messages
+        1. General Structure
+        2. Request
+        3. Response
+      3) HTTP Cookies
+        1. Intro
+        2. Cookie Types
+        3. Cookie Directives/Attributes
+      2) HTTP Cache
+        1. Intro
+        2. Basic Caching process
+        3. Cache Control Headers
+    -->
+
+    <!-- Navigation group -->
+      <a href="#http-messages"
+       class="navbar__nav-link nav-link">
+        <span class="nav-link--http-messages__icon">
+        </span>
+        <span class="nav-link__text">
+          http-messages
+        </span>
+      </a>
+      <nav id="sub-navbar--http-messages"
+       class="sub-navbar">
+        <a href="#general-structure"
+         class="nav-link sub-navbar__navitem">
+          general-structure
+        </a>
+        <a href="#general-structure"
+         class="nav-link sub-navbar__navitem">
+          request
+        </a>
+        <a href="#general-structure"
+         class="nav-link sub-navbar__navitem">
+          response
+        </a>
+      </nav>
+    <!-- -->
+
+    <!-- Navigation group -->
+      <a href="#http-cookies"
+       class="navbar__nav-link nav-link">
+        <span class="nav-link--http-cookies__icon">
+        </span>
+        <span class="nav-link__text">
+          http-cookies
+        </span>
+      </a>
+      <nav id="sub-navbar--http-cookies"
+       class="sub-navbar">
+        <a href="#cookie-types"
+         class="nav-link sub-navbar__navitem">
+          cookie-types
+        </a>
+        <a href="#cookie-types"
+         class="nav-link sub-navbar__navitem">
+          cookie-attributes
+        </a>
+        <a href="#cookie-types"
+         class="nav-link sub-navbar__navitem">
+          cookie-scope
+        </a>
+      </nav>
+    <!-- -->
+
+    <!-- Navigation group -->
+      <a href="#http-cache"
+       class="navbar__nav-link nav-link">
+        <span class="nav-link--http-cache__icon">
+        </span>
+        <span class="nav-link__text">
+          http-cache
+        </span>
+      </a>
+      <nav id="sub-navbar--http-cache"
+       class="sub-navbar">
+        <a href="#cache-process"
+         class="nav-link sub-navbar__navitem">
+          cache-process
+        </a>
+        <a href="#cache-process"
+         class="nav-link sub-navbar__navitem">
+          cache-control-headers
+        </a>
+        <a href="#cache-process"
+         class="nav-link sub-navbar__navitem">
+          revving
+        </a>
+      </nav>
+    <!-- -->
+    </nav>
+    <main id="main-doc">
+      <!-- Template 
+      <section id="http-cookies" class="main-section">
+        <header class="section-header">
+          <h2 class="section-header__text">
+            http-cookies
+          </h2>
+          <a href="http-cookies"
+           class="section-header__frag-link">
+          </a>
+        </header>
+        <section id="cookie-types">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              cookie-types
+            </h3>
+            <a href="cookie-types"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+        <section id="cookie-attributes">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              cookie-attributes
+            </h3>
+            <a href="cookie-attributes"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+        <section id="cookie-scope">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              cookie-scope
+            </h3>
+            <a href="cookie-scope"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+      </section>
+      End Template -->
+
+      <section id="http-messages" class="main-section">
+        <header class="section-header">
+          <h2 class="section-header__text">
+            http-messages
+          </h2>
+          <a href="http-messages"
+           class="section-header__frag-link">
+          </a>
+        </header>
+        <section id="general-structure">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              general-structure
+            </h3>
+            <a href="general-structure"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+        <section id="request">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              request
+            </h3>
+            <a href="request"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+        <section id="response">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              response
+            </h3>
+            <a href="response"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+      </section>
+
+      <section id="http-cookies" class="main-section">
+        <header class="section-header">
+          <h2 class="section-header__text">
+            http-cookies
+          </h2>
+          <a href="http-cookies"
+           class="section-header__frag-link">
+          </a>
+        </header>
+        <section id="cookie-types">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              cookie-types
+            </h3>
+            <a href="cookie-types"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+        <section id="cookie-attributes">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              cookie-attributes
+            </h3>
+            <a href="cookie-attributes"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+        <section id="cookie-scope">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              cookie-scope
+            </h3>
+            <a href="cookie-scope"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+      </section>
+
+      <section id="http-cache" class="main-section">
+        <header class="section-header">
+          <h2 class="section-header__text">
+            http-cache
+          </h2>
+          <a href="http-cache"
+           class="section-header__frag-link">
+          </a>
+        </header>
+        <section id="cache-process">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              cache-process
+            </h3>
+            <a href="cache-process"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+        <section id="cache-control-headers">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              cache-control-headers
+            </h3>
+            <a href="cache-control-headers"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+        <section id="revving">
+          <header class="section-header">
+            <h3 class="section-header__text">
+              revving
+            </h3>
+            <a href="revving"
+             class="section-header__frag-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+
+          <p>
+          Nunc in sem non ex porta egestas non eget nunc. Sed
+          condimentum massa quis tortor tincidunt, a ultrices libero
+          laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+          vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+          tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+          sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+          fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+          amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+          Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+          volutpat. Sed vitae tempor enim.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <!--
+    <script
+     src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    </script>
+    -->
+  </body>
+</html>
