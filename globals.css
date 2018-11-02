@@ -1,0 +1,90 @@
+:root {
+  --ALPHA-LIGHT: 0.3;
+  --ALPHA-HALF: 0.5;
+  --ALPHA-FULL: 0.8;
+
+  --LIME: hsla(120, 100%, 50%, 1);
+  --HSLA-LIME-LIGHT: hsla(120, 100%, 50%, var(--ALPHA-LIGHT));
+  --HSLA-LIME-HALF: hsla(120, 100%, 50%, var(--ALPHA-HALF));
+  --HSLA-LIME-FULL: hsla(120, 100%, 50%, var(--ALPHA-FULL));
+
+  --DEEP-SKY-BLUE: hsla(195, 100%, 50%, 1);
+  --HSLA-DEEP-SKY-BLUE-LIGHT: hsla(195, 100%, 50%, var(--ALPHA-LIGHT));
+  --HSLA-DEEP-SKY-BLUE-HALF: hsla(195, 100%, 50%, var(--ALPHA-HALF));
+  --HSLA-DEEP-SKY-BLUE-FULL: hsla(195, 100%, 50%, var(--ALPHA-FULL));
+
+  --DODGER-BLUE: hsla(210, 100%, 56%, 1);
+  --HSLA-DODGER-BLUE-LIGHT: hsla(210, 100%, 56%, var(--APLHA-LIGHT));
+  --HSLA-DODGER-BLUE-HALF: hsla(210, 100%, 56%, var(--APLHA-HALF));
+  --HSLA-DODGER-BLUE-FULL: hsla(210, 100%, 56%, var(--APLHA-FULL));
+
+  --GAINSBORO: hsla(0, 0%, 86%, 1);
+  --HSLA-GAINSBORO-LIGHT: hsla(0, 0%, 86%, var(--ALPHA-LIGHT));
+  --HSLA-GAINSBORO-HALF: hsla(0, 0%, 86%, var(--ALPHA-HALF));
+  --HSLA-GAINSBORO-FULL: hsla(0, 0%, 86%, var(--ALPHA-FULL));
+
+  --DARK-SLATE-GREY: hsla(180, 25%, 25%, 1);
+  --HSLA-DARK-SLATE-GREY-LIGHT: hsla(180, 25%, 25%, var(--ALPHA-LIGHT));
+  --HSLA-DARK-SLATE-GREY-HALF: hsla(180, 25%, 25%, var(--ALPHA-HALF));
+  --HSLA-DARK-SLATE-GREY-FULL: hsla(180, 25%, 25%, var(--ALPHA-FULL));
+
+  --LIGHT-SLATE-GREY: hsla(210, 14%, 53%, 1);
+  --HSLA-LIGHT-SLATE-GREY-LIGHT: hsla(210, 14%, 53%, var(--ALPHA-LIGHT));
+  --HSLA-HALF-SLATE-GREY-HALF: hsla(210, 14%, 53%, var(--ALPHA-HALF));
+  --HSLA-FULL-SLATE-GREY-FULL: hsla(210, 14%, 53%, var(--ALPHA-FULL));
+
+  --HEADER-HEIGHT: 5rem;
+  --NAVBAR-WIDTH: 16.25rem;
+}
+
+body {
+  /*
+   * Responsive Font Size Calculations
+   * All values are in rem units
+   *
+   */
+
+  --min-font-size: 0.88;
+  --max-font-size: 1.0;
+  --font-size-diff: calc( var(--max-font-size) -
+                          var(--min-font-size) );
+  --min-vw: 20;
+  --max-vw: 160;
+  --vw-diff: calc( var(--max-vw) - var(--min-vw) );
+  --font-size: calc( var(--min-font-size)*1rem +
+                     var(--font-size-diff)*
+                     ((100vw - var(--min-vw)*1rem)/var(--vw-diff))
+                     );
+
+  font-size; var(--font-size);
+  color: var(--DARK-SLATE-GREY);
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  letter-spacing: 0.04rem;
+}
+
+h1,h2,h3 { margin-bottom: 1rem; }
+h1 { font-size: 180%;}
+h2 { font-size: 160%;}
+h3 { font-size: 140%;}
+
+p {margin: 1rem 0 1rem 0;}
+
+hr {width: 100%;}
+
+[class*="__state--visibility"] {
+  display: none;
+}
+
+.author {
+  color: var(--LIME);
+  margin-left: 0.3rem;
+}
+
+.container {
+  position: relative;
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+}
