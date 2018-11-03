@@ -33,6 +33,11 @@
   --HSLA-HALF-SLATE-GREY-HALF: hsla(210, 14%, 53%, var(--ALPHA-HALF));
   --HSLA-FULL-SLATE-GREY-FULL: hsla(210, 14%, 53%, var(--ALPHA-FULL));
 
+  --RED: hsla(0, 100%, 50%, 1);
+  --HSLA-RED-LIGHT: hsla(0, 100%, 50%, var(--ALPHA-LIGHT));
+  --HSLA-RED-HALF: hsla(0, 100%, 50%, var(--ALPHA-HALF));
+  --HSLA-RED-FULL: hsla(0, 100%, 50%, var(--ALPHA-FULL));
+
   --HEADER-HEIGHT: 5rem;
   --NAVBAR-WIDTH: 16.25rem;
 }
@@ -70,7 +75,7 @@ h3 { font-size: 140%;}
 
 p {margin: 1rem 0 1rem 0;}
 
-hr {width: 100%;}
+hr {width: inherit;}
 
 [class*="__state--visibility"] {
   display: none;
@@ -83,7 +88,6 @@ hr {width: 100%;}
 
 .container {
   position: relative;
-  display: flex;
 }
 
 @media (min-width: 1024px) {

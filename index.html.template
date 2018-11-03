@@ -222,6 +222,17 @@
             Nam consectetur ante purus, quis elementum ante eleifend ac.
             </p>
 
+            <pre class="code-block"><code>
+HTTP/1.1 200 OK
+Date: Sat, 09 Oct 2010 14:28:02 GMT
+Server: Apache
+Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+ETag: "51142bc1-7449-479b075b2891b"
+Accept-Ranges: bytes
+Content-Length: 29769
+Content-Type: text/html
+            </code></pre>
+
             <p>
             Nunc in sem non ex porta egestas non eget nunc. Sed
             condimentum massa quis tortor tincidunt, a ultrices libero
@@ -260,6 +271,16 @@
             accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
             velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
             Nam consectetur ante purus, quis elementum ante eleifend ac.
+            </p>
+
+            <p class="warning-block">
+            Warning!!!
+            nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+            vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+            sollicitudin eros rhoncus in. Phasellus tristique nulla at
+            mauris venenatis placerat. Morbi eget lectus ac leo blandit
+            accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+            velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
             </p>
 
             <p>
@@ -538,6 +559,10 @@
             </p>
           </section>
         </section>
+        <footer class="footer">
+          <hr>
+          Designed and built by <span class="author">Zebedee Lewis</span>
+        </footer>
       </main>
     </div>
 
