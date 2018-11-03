@@ -43,12 +43,54 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1.5;
+  /*
+   * Responsive Font Size Calculations
+   * All values are in rem units
+   *
+   */
+
+  --min-font-size: 0.88;
+  --max-font-size: 1.0;
+  --font-size-diff: calc( var(--max-font-size) -
+                          var(--min-font-size) );
+  --min-vw: 20;
+  --max-vw: 160;
+  --vw-diff: calc( var(--max-vw) - var(--min-vw) );
+  --font-size: calc( var(--min-font-size)*1rem +
+                     var(--font-size-diff)*
+                     ((100vw - var(--min-vw)*1rem)/var(--vw-diff))
+                     );
+
+  font-size: var(--font-size);
+  color: var(--DARK-SLATE-GREY);
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  letter-spacing: 0.04rem;
 }
+
 ol, ul {
 	list-style: none;
 }
 blockquote, q {
 	quotes: none;
 }
+
+h1,h2,h3 {
+ margin-top: 0.5rem;
+ margin-bottom: 1rem;
+ line-height: 100%;
+}
+h1 { font-size: 180%;}
+h2 { font-size: 160%;}
+h3 { font-size: 140%;}
+
+p {margin: 1rem 0 1rem 0;}
+
+hr {
+  width: 100%;
+  box-sizing: border-box;
+}
+

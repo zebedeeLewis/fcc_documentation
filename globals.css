@@ -41,45 +41,21 @@
   --HEADER-HEIGHT: 5rem;
   --HEADER-SPACE-TOP: 1rem;
   --NAVBAR-WIDTH: 16.25rem;
+  --SHADOW-ONE-KEY: 0.75rem 0rem 3.5rem black;
+  --SHADOW-ONE-AMBIENT: 0rem 0rem 3.5rem var(--LIME);
+  --SHADOW-ONE: var(--SHADOW-ONE-KEY),
+                var(--SHADOW-ONE-AMBIENT);
+
+  --SHADOW-TWO-KEY: 0.35rem 0rem 1.6rem black;
+  --SHADOW-TWO-AMBIENT: 0rem 0rem 1.6rem var(--LIME);
+  --SHADOW-TWO: var(--SHADOW-TWO-KEY),
+                var(--SHADOW-TWO-AMBIENT);
+
+  --SHADOW-THREE-KEY: 0.13rem 0rem 0.6rem black;
+  --SHADOW-THREE-AMBIENT: 0rem 0rem 0.6rem var(--LIME);
+  --SHADOW-THREE: var(--SHADOW-THREE-KEY),
+                var(--SHADOW-THREE-AMBIENT);
 }
-
-body {
-  /*
-   * Responsive Font Size Calculations
-   * All values are in rem units
-   *
-   */
-
-  --min-font-size: 0.88;
-  --max-font-size: 1.0;
-  --font-size-diff: calc( var(--max-font-size) -
-                          var(--min-font-size) );
-  --min-vw: 20;
-  --max-vw: 160;
-  --vw-diff: calc( var(--max-vw) - var(--min-vw) );
-  --font-size: calc( var(--min-font-size)*1rem +
-                     var(--font-size-diff)*
-                     ((100vw - var(--min-vw)*1rem)/var(--vw-diff))
-                     );
-
-  font-size; var(--font-size);
-  color: var(--DARK-SLATE-GREY);
-  font-family: "Open Sans", sans-serif;
-  font-style: italic;
-  letter-spacing: 0.04rem;
-}
-
-h1,h2,h3 {
- margin-bottom: 1rem;
- line-height: 100%;
-}
-h1 { font-size: 180%;}
-h2 { font-size: 160%;}
-h3 { font-size: 140%;}
-
-p {margin: 1rem 0 1rem 0;}
-
-hr {width: inherit;}
 
 [class*="__state--visibility"] {
   display: none;
@@ -90,9 +66,4 @@ hr {width: inherit;}
   margin-left: 0.3rem;
 }
 
-.container {
-  position: relative;
-}
-
-@media (min-width: 1024px) {
-}
+.container { position: relative; }
