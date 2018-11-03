@@ -43,9 +43,9 @@
 
   background-color: var(--LIME);
   width: inherit;
-  height: auto;
+  height: var(--HEADER-HEIGHT);
   box-sizing: border-box;
-  padding: 0.5rem 1rem 1.5rem 1rem;
+  padding: var(--HEADER-SPACE-TOP) 1rem 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
