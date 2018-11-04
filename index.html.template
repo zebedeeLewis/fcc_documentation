@@ -39,6 +39,20 @@
             3. Cache Control Headers
         -->
 
+        <!-- Navigation group
+          <input type="checkbox"
+           id="sub-navbar--home__state--visibility"
+           class="sub-navbar__state--visibility">
+ -->
+          <a href="#intro"
+           class="navbar__nav-link nav-link"
+           id="navbar--home__nav-link" >
+            <span class="nav-link__text">
+              home
+            </span>
+          </a>
+        <!-- -->
+
         <!-- Navigation group -->
           <input type="checkbox"
            id="sub-navbar--http-messages__state--visibility"
@@ -109,6 +123,36 @@
             </span>
           </label>
           <nav id="sub-navbar--http-cache"
+           class="sub-navbar">
+            <a href="#cache-process"
+             class="nav-link sub-navbar__nav-link">
+              cache-process
+            </a>
+            <a href="#cache-process"
+             class="nav-link sub-navbar__nav-link">
+              cache-control-headers
+            </a>
+            <a href="#cache-process"
+             class="nav-link sub-navbar__nav-link">
+              revving
+            </a>
+          </nav>
+        <!-- -->
+
+        <!-- Navigation group -->
+          <input type="checkbox"
+           id="sub-navbar--http-security__state--visibility"
+           class="sub-navbar__state--visibility">
+          <label for="sub-navbar--http-security__state--visibility"
+           class="navbar__nav-link nav-link"
+           id="navbar--http-security__nav-link">
+            <span class="nav-link--http-security__icon">
+            </span>
+            <span class="nav-link__text">
+              http-security
+            </span>
+          </label>
+          <nav id="sub-navbar--http-security"
            class="sub-navbar">
             <a href="#cache-process"
              class="nav-link sub-navbar__nav-link">
@@ -219,6 +263,20 @@
             Nam consectetur ante purus, quis elementum ante eleifend ac.
             </p>
 
+            <figure>
+              <pre class="code-block"><code>
+HTTP/1.1 200 OK
+Date: Sat, 09 Oct 2010 14:28:02 GMT
+Server: Apache
+Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+ETag: "51142bc1-7449-479b075b2891b"
+Accept-Ranges: bytes
+Content-Length: 29769
+Content-Type: text/html
+              </code></pre>
+              <figcaption>Code example 1.1</figcaption>
+            </figure>
+
             <p>
             Nunc in sem non ex porta egestas non eget nunc. Sed
             condimentum massa quis tortor tincidunt, a ultrices libero
@@ -259,7 +317,8 @@
             Nam consectetur ante purus, quis elementum ante eleifend ac.
             </p>
 
-            <pre class="code-block"><code>
+            <figure>
+              <pre class="code-block"><code>
 HTTP/1.1 200 OK
 Date: Sat, 09 Oct 2010 14:28:02 GMT
 Server: Apache
@@ -268,7 +327,9 @@ ETag: "51142bc1-7449-479b075b2891b"
 Accept-Ranges: bytes
 Content-Length: 29769
 Content-Type: text/html
-            </code></pre>
+              </code></pre>
+              <figcaption>Code example 1.2</figcaption>
+            </figure>
 
             <p>
             Nunc in sem non ex porta egestas non eget nunc. Sed
@@ -310,15 +371,18 @@ Content-Type: text/html
             Nam consectetur ante purus, quis elementum ante eleifend ac.
             </p>
 
-            <p class="warning-block">
-            Warning!!!
-            nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
-            vitae, viverra nec enim. Nam facilisis posuere nulla, sed
-            sollicitudin eros rhoncus in. Phasellus tristique nulla at
-            mauris venenatis placerat. Morbi eget lectus ac leo blandit
-            accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
-            velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
-            </p>
+            <figure>
+              <p class="warning-block">
+              Warning!!!
+              nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+              vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+              sollicitudin eros rhoncus in. Phasellus tristique nulla at
+              mauris venenatis placerat. Morbi eget lectus ac leo blandit
+              accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+              velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+              </p>
+              <figcaption>Warning 1.2</figcaption>
+            </figure>
 
             <p>
             Nunc in sem non ex porta egestas non eget nunc. Sed
@@ -387,6 +451,20 @@ Content-Type: text/html
             velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
             Nam consectetur ante purus, quis elementum ante eleifend ac.
             </p>
+
+            </figure>
+              <pre class="code-block"><code>
+HTTP/1.1 200 OK
+Date: Sat, 09 Oct 2010 14:28:02 GMT
+Server: Apache
+Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
+ETag: "51142bc1-7449-479b075b2891b"
+Accept-Ranges: bytes
+Content-Length: 29769
+Content-Type: text/html
+              </code></pre>
+              <figcaption>Code example 1.2</figcaption>
+            </figure>
 
             <p>
             Nunc in sem non ex porta egestas non eget nunc. Sed
@@ -588,6 +666,181 @@ Content-Type: text/html
             Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
             volutpat. Sed vitae tempor enim.
             </p>
+          </section>
+          <section id="revving">
+            <header class="section-header">
+              <h3 class="section-header__text">
+                revving
+              </h3>
+              <a href="revving"
+               class="cite-link">
+              </a>
+            </header>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin posuere ligula nisl, in sagittis tortor iaculis non.
+            Pellentesque fringilla egestas lacinia. Ut auctor
+            pellentesque erat. Vivamus cursus lectus nulla, accumsan
+            malesuada velit consectetur non. Nam condimentum velit quis
+            nulla interdum molestie. Nullam vulputate odio nec nisl
+            varius, sed tristique ex auctor. Phasellus neque est, porta
+            quis odio sed, ultrices maximus risus. Donec scelerisque non
+            nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+            vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+            sollicitudin eros rhoncus in. Phasellus tristique nulla at
+            mauris venenatis placerat. Morbi eget lectus ac leo blandit
+            accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+            velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+            Nam consectetur ante purus, quis elementum ante eleifend ac.
+            </p>
+
+            <p>
+            Nunc in sem non ex porta egestas non eget nunc. Sed
+            condimentum massa quis tortor tincidunt, a ultrices libero
+            laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+            vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+            tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+            sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+            fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+            amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+            Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+            volutpat. Sed vitae tempor enim.
+            </p>
+          </section>
+        </section>
+
+        <section id="http-security" class="main-section">
+          <header class="section-header">
+            <h2 class="section-header__text">
+              http-security
+            </h2>
+            <a href="http-security"
+             class="cite-link">
+            </a>
+          </header>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Proin posuere ligula nisl, in sagittis tortor iaculis non.
+          Pellentesque fringilla egestas lacinia. Ut auctor
+          pellentesque erat. Vivamus cursus lectus nulla, accumsan
+          malesuada velit consectetur non. Nam condimentum velit quis
+          nulla interdum molestie. Nullam vulputate odio nec nisl
+          varius, sed tristique ex auctor. Phasellus neque est, porta
+          quis odio sed, ultrices maximus risus. Donec scelerisque non
+          nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+          vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+          sollicitudin eros rhoncus in. Phasellus tristique nulla at
+          mauris venenatis placerat. Morbi eget lectus ac leo blandit
+          accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+          velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+          Nam consectetur ante purus, quis elementum ante eleifend ac.
+          </p>
+          <section id="cache-process">
+            <header class="section-header">
+              <h3 class="section-header__text">
+                cache-process
+              </h3>
+              <a href="cache-process"
+               class="cite-link">
+              </a>
+            </header>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin posuere ligula nisl, in sagittis tortor iaculis non.
+            Pellentesque fringilla egestas lacinia. Ut auctor
+            pellentesque erat. Vivamus cursus lectus nulla, accumsan
+            malesuada velit consectetur non. Nam condimentum velit quis
+            nulla interdum molestie. Nullam vulputate odio nec nisl
+            varius, sed tristique ex auctor. Phasellus neque est, porta
+            quis odio sed, ultrices maximus risus. Donec scelerisque non
+            nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+            vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+            sollicitudin eros rhoncus in. Phasellus tristique nulla at
+            mauris venenatis placerat. Morbi eget lectus ac leo blandit
+            accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+            velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+            Nam consectetur ante purus, quis elementum ante eleifend ac.
+            </p>
+
+            <figure>
+              <p class="warning-block">
+              Warning!!!
+              nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+              vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+              sollicitudin eros rhoncus in. Phasellus tristique nulla at
+              mauris venenatis placerat. Morbi eget lectus ac leo blandit
+              accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+              velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+              </p>
+              <figcaption>Warning example 1.2</figcaption>
+            </figure>
+
+            <p>
+            Nunc in sem non ex porta egestas non eget nunc. Sed
+            condimentum massa quis tortor tincidunt, a ultrices libero
+            laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+            vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+            tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+            sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+            fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+            amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+            Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+            volutpat. Sed vitae tempor enim.
+            </p>
+          </section>
+          <section id="cache-control-headers">
+            <header class="section-header">
+              <h3 class="section-header__text">
+                cache-control-headers
+              </h3>
+              <a href="cache-control-headers"
+               class="cite-link">
+              </a>
+            </header>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Proin posuere ligula nisl, in sagittis tortor iaculis non.
+            Pellentesque fringilla egestas lacinia. Ut auctor
+            pellentesque erat. Vivamus cursus lectus nulla, accumsan
+            malesuada velit consectetur non. Nam condimentum velit quis
+            nulla interdum molestie. Nullam vulputate odio nec nisl
+            varius, sed tristique ex auctor. Phasellus neque est, porta
+            quis odio sed, ultrices maximus risus. Donec scelerisque non
+            nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+            vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+            sollicitudin eros rhoncus in. Phasellus tristique nulla at
+            mauris venenatis placerat. Morbi eget lectus ac leo blandit
+            accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+            velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+            Nam consectetur ante purus, quis elementum ante eleifend ac.
+            </p>
+
+            <p>
+            Nunc in sem non ex porta egestas non eget nunc. Sed
+            condimentum massa quis tortor tincidunt, a ultrices libero
+            laoreet. Nulla facilisi. Praesent sed nunc pellentesque,
+            vulputate lorem et, posuere nulla. Curabitur fermentum finibus
+            tortor, ac fringilla ante imperdiet quis. Etiam molestie augue
+            sed purus efficitur, eu vulputate mi aliquam. Praesent eget
+            fermentum lorem, vestibulum malesuada leo. Mauris porta sit
+            amet turpis vel interdum. Proin id nisi urna. Nulla facilisi.
+            Phasellus lacinia venenatis magna eget laoreet. Aliquam erat
+            volutpat. Sed vitae tempor enim.
+            </p>
+
+            <figure>
+              <p class="warning-block">
+              Warning!!!
+              nunc sed dignissim. Curabitur nisi dui, posuere sed vehicula
+              vitae, viverra nec enim. Nam facilisis posuere nulla, sed
+              sollicitudin eros rhoncus in. Phasellus tristique nulla at
+              mauris venenatis placerat. Morbi eget lectus ac leo blandit
+              accumsan et ut enim. Pellentesque et rutrum urna, vel aliquet
+              velit. Nam sem quam, vehicula in rutrum ac, luctus non mi.
+              </p>
+              <figcaption>Warning example 1.2</figcaption>
+            </figure>
+
           </section>
           <section id="revving">
             <header class="section-header">
