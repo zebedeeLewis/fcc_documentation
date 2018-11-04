@@ -17,16 +17,15 @@
 
 .ctrl--jump-to-top {
   border-radius: 100%;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-left: auto;
-  margin-right: 2rem;
+  width: 2.3rem;
+  height: 2.3rem;
   background-color: var(--PRIMARY-COLOR);
   display: block;
   box-shadow: var(--SHADOW-TWO);
 
-  position: sticky;
+  position: fixed;
   bottom: 2rem;
+  right: 2rem;
 }
 
 .ctrl--jump-to-top::before {
@@ -77,7 +76,7 @@
   padding: var(--HEADER-SPACE-TOP) 1rem 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   color: --var(--SECONDARY-COLOR);
 }
 
@@ -193,11 +192,10 @@
               0rem -0.375rem 0.7rem -0.5rem var(--PRIMARY-COLOR);
 }
 
-.sub-navbar__state--visibility:checked + .sub-navbar__ctrl--toggle::after,
 .sub-navbar__state--visibility + .sub-navbar__ctrl--toggle::after {
   content: " ";
-  height: 1.3rem;
-  width: 1.3rem;
+  height: 0.8rem;
+  width: 0.8rem;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-left: auto;
@@ -261,6 +259,12 @@
     transition-duration: 1s, 0.5s;
   }
 
+  .navbar__state--visibility:not(:checked) + .navbar .navbar__header {
+		  /*
+    justify-content: center;
+	*/
+  }
+
   .sub-navbar__ctrl--toggle {
     transition-property: width;
     transition-duration: 1s;
@@ -316,7 +320,10 @@
   .navbar__state--visibility:not(:checked) + .navbar .navbar__logo,
   .navbar__state--visibility:not(:checked) + .navbar .navbar__footer,
   .navbar__state--visibility:not(:checked) + .navbar .nav-link__text,
-  .navbar__state--visibility:not(:checked) + .navbar .sub-navbar__ctrl--toggle::after {
+  .navbar__state--visibility:not(:checked) + .navbar
+      .sub-navbar__state--visibility:not(:checked) +
+	      .sub-navbar__ctrl--toggle::after
+  {
     animation-name: fade-out;
     width: 0;
     display: none;
@@ -325,8 +332,8 @@
   .navbar__state--visibility:not(:checked) + .navbar
   .sub-navbar__ctrl--toggle::before {
     content: " ";
-    width: 2rem;
-    height: 2rem;
+    width: 1.4rem;
+    height: 1.4rem;
     flex: 0 0 auto;
     background-size: 100% 100%;
     background-repeat: no-repeat;
