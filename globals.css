@@ -23,10 +23,17 @@
   --HSLA-GAINSBORO-HALF: hsla(0, 0%, 86%, var(--ALPHA-HALF));
   --HSLA-GAINSBORO-FULL: hsla(0, 0%, 86%, var(--ALPHA-FULL));
 
-  --DARK-SLATE-GREY: hsla(180, 25%, 25%, 1);
-  --HSLA-DARK-SLATE-GREY-LIGHT: hsla(180, 25%, 25%, var(--ALPHA-LIGHT));
-  --HSLA-DARK-SLATE-GREY-HALF: hsla(180, 25%, 25%, var(--ALPHA-HALF));
-  --HSLA-DARK-SLATE-GREY-FULL: hsla(180, 25%, 25%, var(--ALPHA-FULL));
+
+  --PALE-GREEN: hsla(120, 100%, 75%, 1);
+  --HSLA-PALE-GREEN-LIGHT: hsla(120, 100%, 75%, var(--ALPHA-LIGHT));
+  --HSLA-PALE-GREEN-HALF: hsla(120, 100%, 75%, var(--ALPHA-HALF));
+  --HSLA-PALE-GREEN-FULL: hsla(120, 100%, 75%, var(--ALPHA-FULL));
+
+
+  --DARK-SLATE-GREY: hsla(180, 25%, 24%, 1);
+  --HSLA-DARK-SLATE-GREY-LIGHT: hsla(180, 25%, 24%, var(--ALPHA-LIGHT));
+  --HSLA-DARK-SLATE-GREY-HALF: hsla(180, 25%, 24%, var(--ALPHA-HALF));
+  --HSLA-DARK-SLATE-GREY-FULL: hsla(180, 25%, 24%, var(--ALPHA-FULL));
 
   --LIGHT-SLATE-GREY: hsla(210, 14%, 53%, 1);
   --HSLA-LIGHT-SLATE-GREY-LIGHT: hsla(210, 14%, 53%, var(--ALPHA-LIGHT));
@@ -37,6 +44,8 @@
   --HSLA-RED-LIGHT: hsla(0, 100%, 50%, var(--ALPHA-LIGHT));
   --HSLA-RED-HALF: hsla(0, 100%, 50%, var(--ALPHA-HALF));
   --HSLA-RED-FULL: hsla(0, 100%, 50%, var(--ALPHA-FULL));
+
+  --CHARCOAL: hsla(0, 0%, 27%, 1);
 
   --HEADER-HEIGHT: 5rem;
   --HEADER-SPACE-TOP: 1rem;
@@ -55,11 +64,22 @@
   --SHADOW-THREE-AMBIENT: 0rem 0rem 0.6rem var(--LIME);
   --SHADOW-THREE: var(--SHADOW-THREE-KEY),
                 var(--SHADOW-THREE-AMBIENT);
+
+  --PRIMARY-COLOR: var(--PALE-GREEN);
+  --SECONDARY-COLOR: var(--CHARCOAL);
+  --TERTIARY-COLOR: #F5F5F5; /*smokey grey*/
+}
+
+body {
+  background-color: var(--TERTIARY-COLOR);
 }
 
 [class*="__state--visibility"] {
   display: none;
 }
+
+[class*="ctrl--"]:hover,
+[class*="ctrl--"]:active { cursor: pointer; }
 
 .author {
   color: var(--LIME);
