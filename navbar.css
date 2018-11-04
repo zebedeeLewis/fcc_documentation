@@ -255,9 +255,7 @@
   }
 
   .navbar__state--visibility:not(:checked) + .navbar .navbar__header {
-      /*
     justify-content: center;
-  */
   }
 
   .sub-navbar__ctrl--toggle {

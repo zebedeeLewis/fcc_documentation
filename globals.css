@@ -37,8 +37,8 @@
 
   --LIGHT-SLATE-GREY: hsla(210, 14%, 53%, 1);
   --HSLA-LIGHT-SLATE-GREY-LIGHT: hsla(210, 14%, 53%, var(--ALPHA-LIGHT));
-  --HSLA-HALF-SLATE-GREY-HALF: hsla(210, 14%, 53%, var(--ALPHA-HALF));
-  --HSLA-FULL-SLATE-GREY-FULL: hsla(210, 14%, 53%, var(--ALPHA-FULL));
+  --HSLA-LIGHT-SLATE-GREY-HALF: hsla(210, 14%, 53%, var(--ALPHA-HALF));
+  --HSLA-LIGHT-SLATE-GREY-FULL: hsla(210, 14%, 53%, var(--ALPHA-FULL));
 
   --RED: hsla(0, 100%, 50%, 1);
   --HSLA-RED-LIGHT: hsla(0, 100%, 50%, var(--ALPHA-LIGHT));
