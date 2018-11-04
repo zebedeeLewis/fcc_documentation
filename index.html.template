@@ -9,6 +9,9 @@
      href="./style_module.css" />
   </head>
   <body>
+		<!-- TODO:
+		 add faded number to section headings
+		-->
     <div class="container">
       <input type="checkbox"
        id="navbar__state--visibility"
@@ -38,12 +41,6 @@
             2. Basic Caching process
             3. Cache Control Headers
         -->
-
-        <!-- Navigation group
-          <input type="checkbox"
-           id="sub-navbar--home__state--visibility"
-           class="sub-navbar__state--visibility">
- -->
           <a href="#main-header"
            class="sub-navbar__ctrl--toggle nav-link"
            id="navbar--home__nav-link" >
