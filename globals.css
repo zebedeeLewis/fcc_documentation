@@ -50,20 +50,17 @@
   --HEADER-HEIGHT: 5rem;
   --HEADER-SPACE-TOP: 1rem;
   --NAVBAR-WIDTH: 16.25rem;
-  --SHADOW-ONE-KEY: 0.75rem 0rem 3.5rem black;
-  --SHADOW-ONE-AMBIENT: 0rem 0rem 3.5rem var(--LIME);
+  --KEY-SHADOW-COLOR: hsla(0, 0%, 40%, 1);
+  --AMBIENT-SHADOW-COLOR: black;
+  --SHADOW-ONE-KEY: 0.75rem 0.2rem 3.0rem var(--KEY-SHADOW-COLOR);
+  --SHADOW-ONE-AMBIENT: 0rem 0rem 0.5rem var(--AMBIENT-SHADOW-COLOR);
   --SHADOW-ONE: var(--SHADOW-ONE-KEY),
                 var(--SHADOW-ONE-AMBIENT);
 
-  --SHADOW-TWO-KEY: 0.35rem 0rem 1.6rem black;
-  --SHADOW-TWO-AMBIENT: 0rem 0rem 1.6rem var(--LIME);
+  --SHADOW-TWO-KEY: 0.35rem 0.8rem 1.3rem var(--KEY-SHADOW-COLOR);
+  --SHADOW-TWO-AMBIENT: 0rem 0rem 0.3rem var(--AMBIENT-SHADOW-COLOR);
   --SHADOW-TWO: var(--SHADOW-TWO-KEY),
                 var(--SHADOW-TWO-AMBIENT);
-
-  --SHADOW-THREE-KEY: 0.13rem 0rem 0.6rem black;
-  --SHADOW-THREE-AMBIENT: 0rem 0rem 0.6rem var(--LIME);
-  --SHADOW-THREE: var(--SHADOW-THREE-KEY),
-                var(--SHADOW-THREE-AMBIENT);
 
   --PRIMARY-COLOR: var(--PALE-GREEN);
   --SECONDARY-COLOR: var(--CHARCOAL);
