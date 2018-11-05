@@ -68,7 +68,7 @@
   --nav-link-height: 3rem;
   --nav-link-count: 3;
 
-  height: calc(var(--nav-link-height)*var(--nav-link-count));
+  height: 0;
   width: inherit;
   display: flex;
   flex-direction: column;
@@ -88,9 +88,13 @@
   padding: 0 1rem;
 }
 
-.sub-navbar__state--visibility:not(:checked) + .sub-navbar__ctrl--toggle +
-.sub-navbar {
-  height: 0;
+.navbar__state--visibility:not(:checked) ~ .navbar:hover
+    .sub-navbar__state--visibility:checked +
+    .sub-navbar__ctrl--toggle + .sub-navbar,
+.navbar__state--visibility:checked ~ .navbar
+    .sub-navbar__state--visibility:checked +
+    .sub-navbar__ctrl--toggle + .sub-navbar {
+  height: calc(var(--nav-link-height)*var(--nav-link-count));
   overflow: hidden;
 }
 
