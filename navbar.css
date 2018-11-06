@@ -356,3 +356,16 @@
 }
 
 /** end navbar toggle functionality **/
+
+.ctrl--jump-to-top {
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+}
+
+@media (max-width: 375px) {
+  .navbar__state--visibility:checked ~ .main .ctrl--jump-to-top {
+    opacity: 0;
+  }
+}
