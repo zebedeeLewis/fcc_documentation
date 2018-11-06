@@ -30,7 +30,7 @@
   --logo-content-height: 1.5rem;
 
   background-color: var(--PRIMARY-COLOR);
-  width: inherit;
+  width: 100%;
   height: var(--HEADER-HEIGHT);
   flex: 0 0 auto;
   box-sizing: border-box;
@@ -40,7 +40,6 @@
   align-items: center;
   color: --var(--SECONDARY-COLOR);
 }
-
 
 .navbar__logo {
   display: flex;
@@ -112,28 +111,6 @@
   z-index: 2;
 }
 
-.sub-navbar__ctrl--toggle-visibility:hover {
-  box-shadow: var(--ELEVATION-TWO-SHADOW);
-}
-
-.sub-navbar__ctrl--toggle-visibility:active {
-  box-shadow: var(--ELEVATION-ONE-SHADOW);
-}
-
-/*
-.sub-navbar__state--visibility:checked + .sub-navbar__ctrl--toggle-visibility +
-.sub-navbar + .sub-navbar__state--visibility + .sub-navbar__ctrl--toggle-visibility {
-  box-shadow: 0rem -0.375rem 0.7rem -0.5rem var(--PRIMARY-COLOR);
-}
-
-.sub-navbar__state--visibility:checked + .sub-navbar__ctrl--toggle-visibility +
-.sub-navbar + .sub-navbar__state--visibility:checked + .sub-navbar__ctrl--toggle-visibility {
-  box-shadow: var(--SHADOW-TWO-KEY),
-              var(--SHADOW-TWO-AMBIENT),
-              0rem -0.375rem 0.7rem -0.5rem var(--PRIMARY-COLOR);
-}
-*/
-
 .sub-navbar__ctrl--toggle-visibility::after {
   content: " ";
   height: 0.8rem;
@@ -191,7 +168,6 @@
   background-color: var(--PRIMARY-COLOR);
   display: block;
   box-shadow: var(--RESTING-SHADOW);
-
   position: fixed;
   bottom: 2rem;
   right: 2rem;
