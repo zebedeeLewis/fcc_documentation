@@ -66,7 +66,8 @@ body {
 
   font-size: var(--font-size);
   color: var(--DARK-SLATE-GREY);
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   letter-spacing: 0.04rem;
 }
 
@@ -76,11 +77,13 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
+figcaption { font-style: italic; }
 
 h1,h2,h3 {
  margin-top: 0.5rem;
  margin-bottom: 1rem;
  line-height: 100%;
+ font-weight: 500;
 }
 h1 { font-size: 180%;}
 h2 { font-size: 160%;}

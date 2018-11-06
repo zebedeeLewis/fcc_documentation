@@ -46,25 +46,30 @@
   --HSLA-RED-FULL: hsla(0, 100%, 50%, var(--ALPHA-FULL));
 
   --CHARCOAL: hsla(0, 0%, 27%, 1);
+  --SMOKEY-GREY: #F5F5F5;
 
   --HEADER-HEIGHT: 5rem;
   --HEADER-SPACE-TOP: 1rem;
   --NAVBAR-WIDTH: 16.25rem;
-  --KEY-SHADOW-COLOR: hsla(0, 0%, 40%, 1);
-  --AMBIENT-SHADOW-COLOR: black;
-  --SHADOW-ONE-KEY: 0.75rem 0.2rem 3.0rem var(--KEY-SHADOW-COLOR);
-  --SHADOW-ONE-AMBIENT: 0rem 0rem 0.5rem var(--AMBIENT-SHADOW-COLOR);
-  --SHADOW-ONE: var(--SHADOW-ONE-KEY),
-                var(--SHADOW-ONE-AMBIENT);
 
-  --SHADOW-TWO-KEY: 0.35rem 0.8rem 1.3rem var(--KEY-SHADOW-COLOR);
-  --SHADOW-TWO-AMBIENT: 0rem 0rem 0.3rem var(--AMBIENT-SHADOW-COLOR);
-  --SHADOW-TWO: var(--SHADOW-TWO-KEY),
-                var(--SHADOW-TWO-AMBIENT);
+  --RESTING-AMBIENT-SHADOW: 0rem 0rem .6rem hsl(0, 0%, 65%);
+  --RESTING-KEY-SHADOW: 0rem 0.2rem .8rem hsl(0, 0%, 30%);
+  --RESTING-SHADOW: var(--RESTING-AMBIENT-SHADOW),
+                    var(--RESTING-KEY-SHADOW);
+  
+  --ELEVATION-ONE-AMBIENT-SHADOW: 0rem 0rem 1rem hsl(0, 0%, 65%);
+  --ELEVATION-ONE-KEY-SHADOW: 0rem 0.3rem 1.2rem hsl(0, 0%, 30%);
+  --ELEVATION-ONE-SHADOW: var(--ELEVATION-ONE-AMBIENT-SHADOW),
+                          var(--ELEVATION-ONE-KEY-SHADOW);
+
+  --ELEVATION-TWO-AMBIENT-SHADOW: 0rem 0rem 1.8rem hsl(0, 0%, 65%);
+  --ELEVATION-TWO-KEY-SHADOW: 0rem 0.8rem 2.0rem hsl(0, 0%, 30%);
+  --ELEVATION-TWO-SHADOW: var(--ELEVATION-TWO-AMBIENT-SHADOW),
+                          var(--ELEVATION-TWO-KEY-SHADOW);
 
   --PRIMARY-COLOR: var(--PALE-GREEN);
   --SECONDARY-COLOR: var(--CHARCOAL);
-  --TERTIARY-COLOR: #F5F5F5; /*smokey grey*/
+  --TERTIARY-COLOR: var(--SMOKEY-GREY);
 }
 
 body {
@@ -75,8 +80,17 @@ body {
   display: none;
 }
 
+[class*="ctrl--"] {
+  transition-property: box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
 [class*="ctrl--"]:hover,
 [class*="ctrl--"]:active { cursor: pointer; }
+
+[class*="ctrl--"]:hover { box-shadow: var(--ELEVATION-TWO-SHADOW); }
+[class*="ctrl--"]:active { box-shadow: var(--ELEVATION-ONE-SHADOW); }
 
 .author {
   color: var(--LIME);
