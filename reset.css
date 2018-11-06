@@ -92,7 +92,7 @@ h3 { font-size: 140%;}
 p {margin: 1rem 0 1rem 0;}
 
 hr {
-  width: 100%;
+  width: inherit;
   box-sizing: border-box;
 }
 

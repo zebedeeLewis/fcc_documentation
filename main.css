@@ -66,6 +66,18 @@
   margin-bottom: 0.6rem;
 }
 
+@media (max-width: 480px) {
+  .main__header {
+    height: 9rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .main__header::after {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .code-block,
   .warning-block {
@@ -86,7 +98,7 @@
   }
 
   .main__header {
-    padding-left: 4rem;
+    padding-left: 1rem;
   }
 }
 
@@ -104,10 +116,6 @@
     box-sizing: border-box;
   }
 
-	/*
-  .navbar:hover ~ .main,
-  .navbar__state--visibility:checked ~ .main {
-	*/
   .main {
     padding-left: calc(var(--NAVBAR-WIDTH)*1.2);
   }

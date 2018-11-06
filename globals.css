@@ -51,6 +51,8 @@
   --HEADER-HEIGHT: 5rem;
   --HEADER-SPACE-TOP: 1rem;
   --NAVBAR-WIDTH: 16.25rem;
+  --NAVBAR-COLLAPSED-WIDTH: 4rem;
+  --NAVBAR-EXPAND-DURATION: 0.5s;
 
   --RESTING-AMBIENT-SHADOW: 0 0 0.125rem hsl(0, 0%, 65%);
   --RESTING-KEY-SHADOW: 0 0.125rem 0.125rem hsl(0, 0%, 30%);
@@ -76,7 +78,7 @@ body {
   background-color: var(--TERTIARY-COLOR);
 }
 
-[class*="__state--visibility"] {
+[class*="__state--collapse"] {
   display: none;
 }
 
