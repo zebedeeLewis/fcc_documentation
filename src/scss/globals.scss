@@ -51,8 +51,8 @@
   --HEADER-HEIGHT: 5rem;
   --HEADER-SPACE-TOP: 1rem;
   --NAVBAR-WIDTH: 16.25rem;
-  --NAVBAR-COLLAPSED-WIDTH: 4rem;
-  --NAVBAR-EXPAND-DURATION: 0.5s;
+  --NAVBAR-COLLAPSED-WIDTH: 50px;
+  --NAVBAR-EXPAND-DURATION: 0.15s;
 
   --RESTING-AMBIENT-SHADOW: 0 0 0.250rem hsl(0, 0%, 20%);
   --RESTING-KEY-SHADOW: 0 0.125rem 0.250rem hsl(0, 0%, 15%);
@@ -91,8 +91,6 @@ body {
 [class*="ctrl--"]:hover,
 [class*="ctrl--"]:active { cursor: pointer; }
 
-[class*="ctrl--"]:hover { box-shadow: var(--ELEVATION-TWO-SHADOW); }
-[class*="ctrl--"]:active { box-shadow: var(--ELEVATION-ONE-SHADOW); }
 
 .author {
   color: var(--LIME);
@@ -102,7 +100,3 @@ body {
 .container { position: relative; }
 
 
-@media screen (pointer: none) {
-  [class*="ctrl--"]:hover { box-shadow: var(--ELEVATION-TWO-SHADOW); }
-  [class*="ctrl--"]:active { box-shadow: var(--ELEVATION-ONE-SHADOW); }
-}

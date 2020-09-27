@@ -3,23 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport"
-     content="width=device-width, initial-scale=1" />
+     content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Zebedee Lewis" />
+    <link
+     rel="stylesheet"
+     href="https://fonts.googleapis.com/css?family=Roboto:300,500"
+    >
     <link rel="stylesheet" type="text/css"
-     href="./style_module.css" />
+     href="./assets/css/reset.css"
+    />
+    <link rel="stylesheet" type="text/css"
+     href="./assets/css/icons.css"
+    />
+    <title>Http Documentation</title>
   </head>
   <body>
-    <!-- TODO:
-     add faded number to section headings
-    -->
     <div class="container">
       <input type="checkbox"
-       id="navbar__state--visibility"
-       class="navbar__state--visibility">
+       id="navbar__state--collapse"
+       class="navbar__state--collapse" checked>
       <nav id="navbar" class="navbar">
         <header class="navbar__header">
-          <label for="navbar__state--visibility"
-           class="navbar__ctrl--toggle-visibility"></label>
+          <label for="navbar__state--collapse"
+           class="navbar__ctrl--toggle-collapse"
+          >
+            <span class="icon-list"></span>
+          </label>
           <span class="navbar__logo">
             <span class="logo-icon"></span>
             <span class="logo-text">HTTP</span>
@@ -27,42 +36,27 @@
         </header>
 
         <div class="navbar__content">
-        <!--
-          1) HTTP Messages
-            1. General Structure
-            2. Request
-            3. Response
-          3) HTTP Cookies
-            1. Intro
-            2. Cookie Types
-            3. Cookie Directives/Attributes
-          2) HTTP Cache
-            1. Intro
-            2. Basic Caching process
-            3. Cache Control Headers
-        -->
           <a href="#main-header"
-           class="sub-navbar__ctrl--toggle nav-link"
+           class="sub-navbar__ctrl--toggle-collapse nav-link"
            id="navbar--home__nav-link" >
             <span class="nav-link__text">
               home
             </span>
           </a>
-        <!-- -->
 
-        <!-- Navigation group -->
           <input type="checkbox"
-           id="sub-navbar--http-messages__state--visibility"
-           class="sub-navbar__state--visibility">
-          <label for="sub-navbar--http-messages__state--visibility"
-           class="sub-navbar__ctrl--toggle nav-link"
+           id="sub-navbar--http-messages__state--collapse"
+           class="sub-navbar__state--collapse" checked>
+          <label for="sub-navbar--http-messages__state--collapse"
+           class="sub-navbar__ctrl--toggle-collapse nav-link"
            id="navbar--http-messages__nav-link" >
             <span class="nav-link__text">
               http-messages
             </span>
           </label>
           <nav id="sub-navbar--http-messages"
-           class="sub-navbar">
+           class="sub-navbar"
+          >
             <a href="#general-structure"
              class="nav-link sub-navbar__nav-link">
               general-structure
@@ -76,15 +70,14 @@
               response
             </a>
           </nav>
-        <!-- -->
-
-        <!-- Navigation group -->
           <input type="checkbox"
-           id="sub-navbar--http-cookies__state--visibility"
-           class="sub-navbar__state--visibility">
-          <label for="sub-navbar--http-cookies__state--visibility"
-           class="sub-navbar__ctrl--toggle nav-link"
-           id="navbar--http-cookies__nav-link">
+           id="sub-navbar--http-cookies__state--collapse"
+           class="sub-navbar__state--collapse" checked
+          >
+          <label for="sub-navbar--http-cookies__state--collapse"
+           class="sub-navbar__ctrl--toggle-collapse nav-link"
+           id="navbar--http-cookies__nav-link"
+          >
             <span class="nav-link__text">
               http-cookies
             </span>
@@ -104,14 +97,12 @@
               cookie-scope
             </a>
           </nav>
-        <!-- -->
 
-        <!-- Navigation group -->
           <input type="checkbox"
-           id="sub-navbar--http-cache__state--visibility"
-           class="sub-navbar__state--visibility">
-          <label for="sub-navbar--http-cache__state--visibility"
-           class="sub-navbar__ctrl--toggle nav-link"
+           id="sub-navbar--http-cache__state--collapse"
+           class="sub-navbar__state--collapse" checked>
+          <label for="sub-navbar--http-cache__state--collapse"
+           class="sub-navbar__ctrl--toggle-collapse nav-link"
            id="navbar--http-cache__nav-link">
             <span class="nav-link--http-cache__icon">
             </span>
@@ -134,14 +125,12 @@
               revving
             </a>
           </nav>
-        <!-- -->
 
-        <!-- Navigation group -->
           <input type="checkbox"
-           id="sub-navbar--http-security__state--visibility"
-           class="sub-navbar__state--visibility">
-          <label for="sub-navbar--http-security__state--visibility"
-           class="sub-navbar__ctrl--toggle nav-link"
+           id="sub-navbar--http-security__state--collapse"
+           class="sub-navbar__state--collapse" checked>
+          <label for="sub-navbar--http-security__state--collapse"
+           class="sub-navbar__ctrl--toggle-collapse nav-link"
            id="navbar--http-security__nav-link">
             <span class="nav-link--http-security__icon">
             </span>
@@ -164,7 +153,6 @@
               revving
             </a>
           </nav>
-        <!-- -->
         </div>
 
         <footer class="navbar__footer">
@@ -210,10 +198,6 @@
           Nam consectetur ante purus, quis elementum ante eleifend ac.
           </p>
         </section>
-
-        <!-- Template 
-        End Template -->
-
         <section id="http-messages" class="main-section">
           <header class="section-header">
             <h2 class="section-header__text">
@@ -889,7 +873,9 @@ Content-Type: text/html
           </section>
         </section>
 
-        <a href="#main-header" class="ctrl--jump-to-top"></a>
+        <a href="#main-header" class="ctrl--jump-to-top">
+          <span class="icon-chevron-thin-up"></span>
+        </a>
         <footer class="footer">
           <hr>
           Designed and built by <span class="author">Zebedee Lewis</span>
